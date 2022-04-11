@@ -172,3 +172,29 @@ body {
     grid-area: hero;
     background-color: rgb(188, 246, 206);
 }
+
+.icon {
+    width: 2rem;
+}
+
+.icon-lg {
+    width: 6rem;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.profile-photo-lg {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+}
+
+.card {
+    border: 1px solid grey;
+    width: 400px;
+    height: 250px;
+}
