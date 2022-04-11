@@ -110,6 +110,11 @@ section {
   display: block;
 }
 
+/*************************************/
+/* MAIN CSS */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Palette+Mosaic&family=Red+Hat+Mono&family=Rubik+Moonrocks&display=swap");
+
 body {
   line-height: 1;
 }
@@ -144,6 +149,9 @@ body {
 }
 
 .container {
+  width: 100%;
+  height: 100vh;
+
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 1fr 8fr;
@@ -153,48 +161,71 @@ body {
     "menu hero";
 }
 
-.top-nav{
-    grid-area: top-nav;
-    background-color: rgb(152, 116, 185);
+.top-nav {
+  grid-area: top-nav;
+  background-color: rgb(152, 116, 185);
 }
 
-.bottom-nav{
-    grid-area: bottom-nav;
-    background-color: rgb(253, 220, 59);
+.bottom-nav {
+  grid-area: bottom-nav;
+  background-color: rgb(253, 220, 59);
 }
 
 .menu {
-    grid-area: menu;
-    background-color: rgb(249, 123, 123);
+  grid-area: menu;
+  background-color: rgb(249, 123, 123);
+
+  display: grid;
+  grid-template-columns: 400px;
+  grid-template-rows: 100px 1fr;
+  gap: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header > div {
+  color: white;
+  font-weight: solid;
+  font-size: 3rem;
+  font-family: 'Red Hat Mono', monospace;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9, 60px);
 }
 
 .hero-section {
-    grid-area: hero;
-    background-color: rgb(188, 246, 206);
+  grid-area: hero;
+  background-color: rgb(188, 246, 206);
 }
 
 .icon {
-    width: 2rem;
+  width: 2rem;
 }
 
 .icon-lg {
-    width: 6rem;
+  width: 6rem;
 }
 
 .profile-photo {
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
 }
 
 .profile-photo-lg {
-    border-radius: 50%;
-    width: 8rem;
-    height: 8rem;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
 }
 
 .card {
-    border: 1px solid grey;
-    width: 400px;
-    height: 250px;
+  border: 1px solid grey;
+  width: 400px;
+  height: 250px;
 }
