@@ -150,12 +150,9 @@ body {
 }
 
 .container {
-  width: 100%;
-  height: 100vh;
-
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr 8fr;
+  grid-template-rows: auto auto 8fr;
   grid-template-areas:
     "menu top-nav"
     "menu bottom-nav"
@@ -163,7 +160,7 @@ body {
 }
 
 .icon {
-  width: 2rem;
+  width: 1.5rem;
 }
 
 .icon-lg {
@@ -191,20 +188,21 @@ body {
 
   display: grid;
   grid-template-columns: repeat(2,auto);
-  grid-auto-flow: column;
+  grid-template-rows: 4rem;
+  align-items: center;
 
-  padding: 10px;
+  margin: 1rem 0;
 }
 
 .search-field {
   background-color: rgb(222, 222, 222);
-  width: 50rem;
+  width: 35rem;
   height: 2.5rem;
   border-radius: 25px;
 }
 
 .search {
-  margin-left: 4rem;
+  margin-left: 2rem;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1rem;
@@ -226,8 +224,14 @@ body {
 
 .nav-profile-name {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: rgb(58, 56, 56);
+}
+
+.nav-profile-photo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
 }
 
 .bottom-nav {
@@ -243,8 +247,8 @@ body {
   background-color: rgb(249, 123, 123);
 
   display: grid;
-  grid-template-columns: 400px;
-  grid-template-rows: 100px 1fr;
+  grid-template-columns: 20rem;
+  grid-template-rows: auto 1fr;
   gap: 2rem;
 }
 
@@ -256,13 +260,14 @@ body {
 .dashboard-header > div {
   color: white;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.3rem;
 }
 
 .menu ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, 60px);
+  align-items: center;
 
   margin-left: 1.5rem;
 }
@@ -270,15 +275,17 @@ body {
 .menu li {
     font-family: 'Nunito', sans-serif;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
 
     display: grid;
     grid-template-columns: auto 1fr;
     justify-items: start;
-    align-content: center;
+    align-items: center;
     gap: 1rem;
 }
+
+
 
 /*************************************/
 /* HERO SECTION */
