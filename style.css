@@ -143,6 +143,12 @@ table {
 /*************************************/
 /* MAIN CSS */
 
+:root {
+  --blue: #4e598c;
+  --white: #ffffff;
+  --yellow: #f9c784;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Quicksand:wght@300;500&display=swap');
 
 body {
@@ -244,7 +250,7 @@ body {
 
 .menu {
   grid-area: menu;
-  background-color: rgb(249, 123, 123);
+  background-color: #4e598c;
 
   display: grid;
   grid-template-columns: 20rem;
