@@ -110,11 +110,6 @@ section {
   display: block;
 }
 
-/*************************************/
-/* MAIN CSS */
-
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Palette+Mosaic&family=Red+Hat+Mono&family=Rubik+Moonrocks&display=swap");
-
 body {
   line-height: 1;
 }
@@ -144,8 +139,14 @@ table {
   border-spacing: 0;
 }
 
+
+/*************************************/
+/* MAIN CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Quicksand:wght@300;500&display=swap');
+
 body {
-  background-color: antiquewhite;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container {
@@ -159,49 +160,6 @@ body {
     "menu top-nav"
     "menu bottom-nav"
     "menu hero";
-}
-
-.top-nav {
-  grid-area: top-nav;
-  background-color: rgb(152, 116, 185);
-}
-
-.bottom-nav {
-  grid-area: bottom-nav;
-  background-color: rgb(253, 220, 59);
-}
-
-.menu {
-  grid-area: menu;
-  background-color: rgb(249, 123, 123);
-
-  display: grid;
-  grid-template-columns: 400px;
-  grid-template-rows: 100px 1fr;
-  gap: 2rem;
-}
-
-.dashboard-header {
-  display: flex;
-  align-items: center;
-}
-
-.dashboard-header > div {
-  color: white;
-  font-weight: solid;
-  font-size: 3rem;
-  font-family: 'Red Hat Mono', monospace;
-}
-
-.menu ul {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 60px);
-}
-
-.hero-section {
-  grid-area: hero;
-  background-color: rgb(188, 246, 206);
 }
 
 .icon {
@@ -222,6 +180,112 @@ body {
   border-radius: 50%;
   width: 8rem;
   height: 8rem;
+}
+
+/*************************************/
+/*NAVIGATION */
+
+.top-nav {
+  grid-area: top-nav;
+  background-color: rgb(255, 255, 255);
+
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-auto-flow: column;
+
+  padding: 10px;
+}
+
+.search-field {
+  background-color: rgb(222, 222, 222);
+  width: 50rem;
+  height: 2.5rem;
+  border-radius: 25px;
+}
+
+.search {
+  margin-left: 4rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-profile-info {
+  justify-self: end;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-right: 30px;
+
+}
+
+.nav-profile-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgb(58, 56, 56);
+}
+
+.bottom-nav {
+  grid-area: bottom-nav;
+  background-color: rgb(253, 220, 59);
+}
+
+/*************************************/
+/* SIDEBAR-MENU */
+
+.menu {
+  grid-area: menu;
+  background-color: rgb(249, 123, 123);
+
+  display: grid;
+  grid-template-columns: 400px;
+  grid-template-rows: 100px 1fr;
+  gap: 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-header > div {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, 60px);
+
+  margin-left: 1.5rem;
+}
+
+.menu li {
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    align-content: center;
+    gap: 1rem;
+}
+
+/*************************************/
+/* HERO SECTION */
+
+.hero-section {
+  grid-area: hero;
+  background-color: rgb(188, 246, 206);
 }
 
 .card {
