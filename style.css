@@ -151,6 +151,7 @@ table {
   --blue: #4e598c;
   --white: #ffffff;
   --yellow: #f9c784;
+  --grey: #e4e6f0;
   --font-1: "Raleway", sans-serif;
   --font-2: "Square Peg", cursive;
   --font-3: "Babylonica", cursive;
@@ -201,7 +202,7 @@ body {
 }
 
 .search-field {
-  background-color: rgb(222, 222, 222);
+  background-color: var(--grey);
   width: 35rem;
   height: 2.5rem;
   border-radius: 25px;
@@ -305,7 +306,7 @@ div.buttons {
 
 .menu {
   grid-area: menu;
-  background-color: #4e598c;
+  background-color: var(--blue);
 
   display: grid;
   grid-template-columns: 20rem;
@@ -350,13 +351,31 @@ div.buttons {
 
 .hero-section {
   grid-area: hero;
-  background-color: var(--white);
-  
-  padding: 30px;
+  background-color: var(--grey);
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+  "title title"
+}
+
+.hero-title {
+  grid-area: title;
 }
 
 .card {
-  border: 1px solid grey;
-  width: 400px;
-  height: 250px;
+  /* border: 1px solid grey; */
+  border-left: 12px solid #f9c784;
+  border-radius: 10px;
+  width: 300px; /*Maybe add minmax or clasp here*/
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  background-color: var(--white);
+  margin: 1rem;
 }
