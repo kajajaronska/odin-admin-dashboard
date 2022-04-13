@@ -139,20 +139,26 @@ table {
   border-spacing: 0;
 }
 
-
 /*************************************/
 /* MAIN CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 :root {
   --blue: #4e598c;
   --white: #ffffff;
   --yellow: #f9c784;
+  --font-1: 'Raleway', sans-serif;
+  --font-2: 'Square Peg', cursive;
+  --font-3: 'Babylonica', cursive;
+  --font-4: 'Roboto Mono', monospace;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Quicksand:wght@300;500&display=swap');
-
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--font-4);
 }
 
 .container {
@@ -193,11 +199,13 @@ body {
   background-color: var(--white);
 
   display: grid;
-  grid-template-columns: repeat(2,auto);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: auto;
   align-items: center;
 
   margin: 1rem 0;
+
+
 }
 
 .search-field {
@@ -224,12 +232,11 @@ body {
   gap: 1rem;
 
   margin-right: 30px;
-
 }
 
 .nav-profile-name {
-  font-weight: bold;
   font-size: 1rem;
+  font-weight: bold;
   color: rgb(58, 56, 56);
 }
 
@@ -244,7 +251,7 @@ body {
   background-color: var(--white);
 
   display: grid;
-  grid-template-columns: repeat(2,auto);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: auto;
   align-items: center;
 
@@ -261,15 +268,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-weight: bold;
 }
 
-.greet-msg{
+.greet-msg {
   font-size: 1rem;
 }
 
 .profile-name-main {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /*************************************/
@@ -306,19 +313,16 @@ body {
 }
 
 .menu li {
-    font-family: 'Nunito', sans-serif;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 400;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
 
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-items: start;
-    align-items: center;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-items: start;
+  align-items: center;
+  gap: 1rem;
 }
-
-
 
 /*************************************/
 /* HERO SECTION */
