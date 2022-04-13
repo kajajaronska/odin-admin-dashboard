@@ -142,19 +142,19 @@ table {
 /*************************************/
 /* MAIN CSS */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 :root {
   --blue: #4e598c;
   --white: #ffffff;
   --yellow: #f9c784;
-  --font-1: 'Raleway', sans-serif;
-  --font-2: 'Square Peg', cursive;
-  --font-3: 'Babylonica', cursive;
-  --font-4: 'Roboto Mono', monospace;
+  --font-1: "Raleway", sans-serif;
+  --font-2: "Square Peg", cursive;
+  --font-3: "Babylonica", cursive;
+  --font-4: "Roboto Mono", monospace;
 }
 
 body {
@@ -185,12 +185,6 @@ body {
   height: 5rem;
 }
 
-.profile-photo-lg {
-  border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
-}
-
 /*************************************/
 /*NAVIGATION */
 
@@ -204,8 +198,6 @@ body {
   align-items: center;
 
   margin: 1rem 0;
-
-
 }
 
 .search-field {
@@ -241,8 +233,8 @@ body {
 }
 
 .nav-profile-photo {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
 }
 
@@ -255,7 +247,17 @@ body {
   grid-template-rows: auto;
   align-items: center;
 
-  margin-left: 2rem;
+  padding: 0rem 2rem 0.5rem 2rem;
+
+  box-shadow: rgba(155, 155, 155, 0.45) 0px 25px 20px -20px;
+
+  margin-bottom: 2px;
+}
+
+.profile-photo-lg {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
 }
 
 .greeting {
@@ -277,6 +279,25 @@ body {
 .profile-name-main {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+div.buttons {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.buttons button {
+  background-color: var(--blue);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--white);
+  border-radius: 20px;
+  border-style: none;
+
+  width: 5rem;
+  padding: 0.5rem;
 }
 
 /*************************************/
@@ -329,7 +350,9 @@ body {
 
 .hero-section {
   grid-area: hero;
-  background-color: rgb(188, 246, 206);
+  background-color: var(--white);
+  
+  padding: 30px;
 }
 
 .card {
