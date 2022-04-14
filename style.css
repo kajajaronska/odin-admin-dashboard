@@ -152,6 +152,7 @@ table {
   --white: #ffffff;
   --yellow: #f9c784;
   --grey: #e4e6f0;
+  --dark-grey: #66676a;
   --font-1: "Raleway", sans-serif;
   --font-2: "Square Peg", cursive;
   --font-3: "Babylonica", cursive;
@@ -170,6 +171,8 @@ body {
     "menu top-nav"
     "menu bottom-nav"
     "menu hero";
+
+  height: 100vh;
 }
 
 .icon {
@@ -178,6 +181,7 @@ body {
 
 .icon-lg {
   width: 6rem;
+  transform: rotate(180deg);
 }
 
 .profile-photo {
@@ -354,28 +358,69 @@ div.buttons {
   background-color: var(--grey);
 
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 5rem;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-areas:
-  "title title"
+  "title title";
+  gap: 2rem;
 }
 
 .hero-title {
   grid-area: title;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  align-self: end;
+
+  margin-bottom: -1.2rem;
 }
 
 .card {
-  /* border: 1px solid grey; */
+  justify-self: center;
+
   border-left: 12px solid #f9c784;
   border-radius: 10px;
-  width: 300px; /*Maybe add minmax or clasp here*/
-  height: auto;
+  width: clamp(400px, 23vw, 800px);
+  height: clamp(150px, 20vh, 300px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-
   background-color: var(--white);
-  margin: 1rem;
+  padding-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.card div {
+  padding: 0 1rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  align-self: end;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: var(--dark-grey);
+}
+
+.card-icons {
+  justify-self: end;
+  align-self: end;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+
 }
